@@ -1,7 +1,8 @@
 function tab = makeLearningData(raw, Winsize, lab)
 i = 0;
-while(i < length(raw) - Winsize + 1)
-    sam = raw(i + 1:i + Winsize);
+j = 0;
+while(j + Winsize <= length(raw))%(i < length(raw) - Winsize + 1)
+    sam = raw(j + 1:j + Winsize);
     mn(i + 1) = mean(sam);
     sd(i + 1) = std(sam);
     sk(i + 1) = skewness(sam);
@@ -12,6 +13,7 @@ while(i < length(raw) - Winsize + 1)
     
     label(i + 1) = lab;
     i = i + 1;
+    j = j + 1;
 end
 tab = table(mn', sd', sk', ku', rm', cf', p2p', label', 'VariableNames', {'Mean', 'Std', 'Skewness', 'Kurtosis', 'RMS', 'CF', 'P2P', 'Label'});
 end

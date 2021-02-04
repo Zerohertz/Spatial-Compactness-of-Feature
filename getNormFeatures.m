@@ -1,7 +1,9 @@
 function normData = getNormFeatures(data, Winsize)
-%UNTITLED3 이 함수의 요약 설명 위치
-%   자세한 설명 위치
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
+for i = 1:fix(height(data) / Winsize)
+    for j = 1:width(data) - 1
+        normData(Winsize * (i - 1) + 1:Winsize * i, j) = normalize(data(Winsize * (i - 1) + 1:Winsize * i, j));
+    end
+end
+normData(1:height(normData), width(data)) = data(1:height(normData), width(data));
 end
 
