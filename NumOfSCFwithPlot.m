@@ -1,4 +1,4 @@
-function Num = NumOfSCFwithPlot(Normal, Abnormal, FeatureVec, Winsize, Name)
+function [Num, Feat] = NumOfSCFwithPlot(Normal, Abnormal, FeatureVec, Winsize, Name)
 
 fig = figure;
 set(fig, 'Position', [0 0 1920 1080])
@@ -42,7 +42,8 @@ end
 Num = sum(NcapA, 'All') / sum(NcupA, 'All');
 
 cd plots
-saveas(gca, append(string(Num), '==', string(FeatureVec(1)), '-', string(FeatureVec(2)), '.bmp'))
+saveas(gca, append(string(Num), '==', string(FeatureVec(1)), '-', string(FeatureVec(2)), 'Name', '.tif'))
+Feat = append(string(FeatureVec(1)), '-', string(FeatureVec(2)));
 cd ..
 end
 
