@@ -2,10 +2,10 @@ Num = 1;
 
 for i = 'A'%, 'B', 'C', 'D']
     for j = ['1', '2', '3']
-        cd 'D:\Spatial-Compactness-of-Feature\v43hmbwxpm-2\3 Data collected from a bearing with outer race fault'
+        cd 'D:\Paper\Spatial-Compactness-of-Feature\v43hmbwxpm-2\3 Data collected from a bearing with outer race fault'
         dat = append('O-', i, '-', j, '.mat');
         tmp = load(dat);
-        cd 'D:\Spatial-Compactness-of-Feature\'
+        cd 'D:\Paper\Spatial-Compactness-of-Feature\'
         Fault2(Num).tab = makeLearningDataSrt(tmp.Channel_1, 10000, "Fault");
         Num = Num + 1;
     end
