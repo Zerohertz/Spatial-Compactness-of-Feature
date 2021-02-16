@@ -6,7 +6,7 @@ for i = 'A'%, 'B', 'C', 'D']
         dat = append('H-', i, '-', j, '.mat');
         tmp = load(dat);
         cd 'D:\Paper\Spatial-Compactness-of-Feature\'
-        Normal(Num).tab = makeLearningData(tmp.Channel_1, 100000, "Normal");
+        Normal(Num).tab = makeLearningData(tmp.Channel_1, 10000, "Normal");
         Num = Num + 1;
     end
 end

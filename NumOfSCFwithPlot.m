@@ -42,7 +42,7 @@ end
 Num = sum(NcapA, 'All') / sum(NcupA, 'All');
 
 cd plots
-saveas(gca, append(string(Num), '==', string(FeatureVec(1)), '-', string(FeatureVec(2)), 'Name', '.tif'))
+saveas(gca, append(string(Num), '==', string(FeatureVec(1)), '-', string(FeatureVec(2)), '-', Name, '.tif'))
 Feat = append(string(FeatureVec(1)), '-', string(FeatureVec(2)));
 cd ..
 end

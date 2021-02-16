@@ -13,7 +13,7 @@ while(j + Winsize <= length(raw))%(i < length(raw) - Winsize + 1)
     
     label(i + 1) = lab;
     i = i + 1;
-    j = j + 1;
+    j = j + 10;
 end
 tab = table(mn', sd', sk', ku', rm', cf', p2p', label', 'VariableNames', {'Mean', 'Std', 'Skewness', 'Kurtosis', 'RMS', 'CF', 'P2P', 'Label'});
 end
