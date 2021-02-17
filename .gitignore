@@ -1,3 +1,5 @@
 #/v43hmbwxpm-2
 #/Western Bearing Data
 *.asv
+*.mat
+**/**/*.mat
